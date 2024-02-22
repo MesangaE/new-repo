@@ -16,6 +16,9 @@ pipeline {
     stages{
         stage("Cleanup Workspace"){
                 steps {
+		milestone(1)
+		sleep get time()
+		echo "Finish cleaning"
                 cleanWs()
                 }
         }
